@@ -1,12 +1,12 @@
 
 <?php 
 require "./config.php";
-
+if(isset($_REQUEST['url'])){
 $url = trim($_REQUEST['url']);
 $url = explode('/', $url);
 $Object = trim($url[0]);
 $Action = trim($url[1]);
-
+}
 $requestType = $_SERVER['REQUEST_METHOD'];
 
 if( empty($Object) )  die; 

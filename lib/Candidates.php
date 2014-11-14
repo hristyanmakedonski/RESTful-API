@@ -1,4 +1,5 @@
 <?php 
+require "./config.php";
 
 class Candidates extends Db{
 	private $requestType;

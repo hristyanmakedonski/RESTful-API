@@ -1,4 +1,5 @@
 <?php 
+require './config.php';
 class Jobs extends Db{
 	
 	private $requestType;
