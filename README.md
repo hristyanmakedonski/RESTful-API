@@ -1,5 +1,3 @@
-RESTful-API
-===========
  Create RESTful API
 -------------------------
 1. Create project in github
@@ -21,3 +19,23 @@ PHP
     - /candidates/list
     - /candidates/review/{id}
     - /candidates/search/{id}
+
+
+    Example how to test it 
+
+
+    $.ajax({
+           url : "http://localhost/rest/candidates/review/2", 
+           type : 'post',
+          data : {
+           "name" : 'test name',
+            'position' : " Senior QA "
+            
+            
+            },
+          
+           success : function(data){ 
+               
+            console.log(data)
+           }
+       });
