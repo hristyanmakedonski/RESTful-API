@@ -21,17 +21,49 @@ PHP
     - /candidates/search/{id}
 
 
-    Example how to test it 
+    Example how to test it with jQuery
 
+    Instructions :
 
+    1.  Load jQuery lib
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+ 
+    2. Executing Ajax requests to our RESTful API
+
+    // Get candidates info
     $.ajax({
-           url : "http://localhost/rest/candidates/review/2", 
-           type : 'post',
-          data : {
-           "name" : 'test name',
-            'position' : " Senior QA "
-            
-            
+           url : "http://localhost/RESTful/candidates/search/2", 
+           type : 'get',
+           data : {
+            },
+          
+           success : function(data){ 
+               
+            console.log(data)
+           }
+       });
+
+       //Change candidate info 
+     $.ajax({
+           url : "http://localhost/RESTful/candidates/review/2", 
+           type : 'put',
+           data : {
+              'name' : 'George',
+              'position' : 'Senior Java developer'
+            },
+          
+           success : function(data){ 
+               
+            console.log(data)
+           }
+       });
+
+       //Get lising for jobs
+        $.ajax({
+           url : "http://localhost/RESTful/jobs/list", 
+           type : 'get',
+           data : {
+              
             },
           
            success : function(data){ 
